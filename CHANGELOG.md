@@ -1,5 +1,71 @@
 # Changelog
 
+## [1.0.0-b25](https://github.com/ebullient/the-calendarium/compare/v1.0.1-b25...1.0.0-b25) (2023-09-18)
+
+
+### Features
+
+* `translate` now takes a CalendarAPI instead of string ([2d66c4f](https://github.com/ebullient/the-calendarium/commit/2d66c4f6b37bb0d78b2d70bcb33b29b437004549))
+* Add style settings for displaying span data ([67be760](https://github.com/ebullient/the-calendarium/commit/67be760d637c25e0d18bedb9954c649669bc17fa))
+* Adds `translate` method to plugin API ([e9fbfa5](https://github.com/ebullient/the-calendarium/commit/e9fbfa5445edec66d234326ef15f09c9a93fd440))
+* Adds compare function to API ([cfb2cd9](https://github.com/ebullient/the-calendarium/commit/cfb2cd9787df5a64ac8bd8626d3a29d78199cd69))
+* Calendars will now auto-generate categories if they don't exist for events defined in notes ([e78a9ce](https://github.com/ebullient/the-calendarium/commit/e78a9ce41c6310ab6b365f2255e7812ff45d7cad))
+* can now specify multiple calendar event paths ([4d2ee83](https://github.com/ebullient/the-calendarium/commit/4d2ee83a88ead7658a043d32de834751bcf31205))
+* Can now specify Weekday Abbreviations ([#45](https://github.com/ebullient/the-calendarium/issues/45)) ([ac5928f](https://github.com/ebullient/the-calendarium/commit/ac5928f1ba9aa9d3412af53f03515f9a4b12fe14))
+* Initial API definition started (just events for now) ([4a7f85b](https://github.com/ebullient/the-calendarium/commit/4a7f85b22720ba1fe49195c340258a992f3e0c77))
+* very basic in-note code block `calendarium` ([957a358](https://github.com/ebullient/the-calendarium/commit/957a358dc851ee3a4a8ccf468f5dd549ee0f2155))
+
+
+### Bug Fixes
+
+* Added getCurrentDate to API ([9d48d6b](https://github.com/ebullient/the-calendarium/commit/9d48d6b83e834c17d9c442198bf3b1c9cfc9818b))
+* Better date formatting behavior ([9d8bea1](https://github.com/ebullient/the-calendarium/commit/9d8bea1e07f6f8daf089ebedbaf564233a097db5))
+* Event management has been rewritten, events from notes now appear on calendar correctly ([1c16209](https://github.com/ebullient/the-calendarium/commit/1c16209c30b343c6d870642e989fdd345196adac))
+* exit sorting events if no sort object on events ([6a9b690](https://github.com/ebullient/the-calendarium/commit/6a9b690eb6c2678b0e148c462933206cae456d17))
+* Fix conflict with Default New Tab plugin ([137de2a](https://github.com/ebullient/the-calendarium/commit/137de2a49af6a61d2847d38b9903b3a8bfd804f7))
+* fix double calendar saving ([d413cfe](https://github.com/ebullient/the-calendarium/commit/d413cfe3b90678ac35a3e23f9d7a587c8075e60a))
+* fix typings of Day and LeapDay to avoid unnecessary number field ([1792393](https://github.com/ebullient/the-calendarium/commit/1792393d629bd9ff0dc7e9c4e703f626f2276236))
+* fixes issue where category would persist incorrectly in span events ([02d0107](https://github.com/ebullient/the-calendarium/commit/02d010771847be1e1f2bdf4f48111427f769973a))
+* fixes issue where events can be added to calendars despite not being in the path when modifying notes ([81bfbd4](https://github.com/ebullient/the-calendarium/commit/81bfbd44c2e5f81f327bf4404a86e14d5bdf8a5c))
+* fixes issue where some events would not color correctly ([#44](https://github.com/ebullient/the-calendarium/issues/44)) ([ccc191d](https://github.com/ebullient/the-calendarium/commit/ccc191d309ca09d4de56cc239fb09dbf5dfccb76))
+* fixes presets ([5e66035](https://github.com/ebullient/the-calendarium/commit/5e66035ccd5af26e51d6e10d9abb7e62640165ac))
+* Fixes some issues with the importer not following new schemas ([d0f0d67](https://github.com/ebullient/the-calendarium/commit/d0f0d67eaf4ed2b5b1642db87d007c7d04babeb3))
+* fixes tests ([4b6c95b](https://github.com/ebullient/the-calendarium/commit/4b6c95ba9cebf9a92455095c1b33c9fe177c110e))
+* fixes week navigation ([fe20d7a](https://github.com/ebullient/the-calendarium/commit/fe20d7a92a97ce05eb5977ae76bf343e7b40f830))
+* Improves Calendar Creator appearance & behavior ([af90c16](https://github.com/ebullient/the-calendarium/commit/af90c167e40c6ffe7699de9e03dc650f657d6971))
+* key flags by events so they refresh when empty ([#44](https://github.com/ebullient/the-calendarium/issues/44)) ([b79b233](https://github.com/ebullient/the-calendarium/commit/b79b233f52330f46fb95e7e2883273b07bfcd2f9))
+* load Fantasy Calendar markdown file if user is on beta ([eb94669](https://github.com/ebullient/the-calendarium/commit/eb946691f1009f8149c693232182a5ccd0b75ea7))
+* null guard event sorting ([3fc8276](https://github.com/ebullient/the-calendarium/commit/3fc8276bc49d4f78304abb38cfa5850ddb56e18c))
+* pass component to render markdown ([#44](https://github.com/ebullient/the-calendarium/issues/44)) ([ecde883](https://github.com/ebullient/the-calendarium/commit/ecde883b8c0b40e4a66d2015d31617874b399edf))
+* poke ([fabf477](https://github.com/ebullient/the-calendarium/commit/fabf47795390c48f62f87ad2e7c240f1efa937ad))
+* re-enable week numbers ([e050603](https://github.com/ebullient/the-calendarium/commit/e050603071295e25687f81241a26b3e1e696560f))
+* remove Create Note option for events (this might return) ([02439b4](https://github.com/ebullient/the-calendarium/commit/02439b413ca55a206df1a0d87e5a3a284da7f28b))
+* remove day view, tests pass ([ddc9f9d](https://github.com/ebullient/the-calendarium/commit/ddc9f9dd699dd279329aa04686140d1a54ba7351))
+* shows intercalary days correctly ([b2fe5c7](https://github.com/ebullient/the-calendarium/commit/b2fe5c700664c0f815a82893a7c5c60f3f22629c))
+* sticky nav panel (close [#38](https://github.com/ebullient/the-calendarium/issues/38)) ([5ef60df](https://github.com/ebullient/the-calendarium/commit/5ef60df3d54b4ec91d795119a3ef7cf341bdc082))
+* use name to get calendar API vs id ([9f2a3e3](https://github.com/ebullient/the-calendarium/commit/9f2a3e3c56aa698711b4f9afdcdecfbbbaf85a7f))
+
+
+### Miscellaneous Chores
+
+* release 1.0.0-b10 ([c4551c4](https://github.com/ebullient/the-calendarium/commit/c4551c455dde4cc35d5a4d79db0f169f491a19f0))
+* release 1.0.0-b11 ([53ce634](https://github.com/ebullient/the-calendarium/commit/53ce634abb5cc792da9faa212161996521d01908))
+* release 1.0.0-b12 ([653181e](https://github.com/ebullient/the-calendarium/commit/653181e7fe2ebde4d9f5449c73774dd6b4881070))
+* release 1.0.0-b13 ([22d12bf](https://github.com/ebullient/the-calendarium/commit/22d12bf020d9ace47a9468191875bd1c14b98e31))
+* release 1.0.0-b14 ([05f6831](https://github.com/ebullient/the-calendarium/commit/05f683191abb19acc7389ee4d5a1991e8ab907ae))
+* release 1.0.0-b15 ([b260f78](https://github.com/ebullient/the-calendarium/commit/b260f78fa15e8d6d5d546536555350011e9121a1))
+* release 1.0.0-b16 ([a9b3e77](https://github.com/ebullient/the-calendarium/commit/a9b3e77da006db9a498a6be9f21623ee2a862a35))
+* release 1.0.0-b17 ([b7226ab](https://github.com/ebullient/the-calendarium/commit/b7226ab0abc69bf70efb1278c64b1f5dde544a48))
+* release 1.0.0-b18 ([a82ce43](https://github.com/ebullient/the-calendarium/commit/a82ce4372356de5b3243dad58b4dd8c739c46119))
+* release 1.0.0-b19 ([fdad374](https://github.com/ebullient/the-calendarium/commit/fdad374da3f443ff6d2489cecd7b73c86f493b63))
+* release 1.0.0-b20 ([258c657](https://github.com/ebullient/the-calendarium/commit/258c657b73a8c55abc4d6a168b3b9dc034303d71))
+* release 1.0.0-b21 ([ad3fc64](https://github.com/ebullient/the-calendarium/commit/ad3fc648c330cb2b8e5613ce203fd964ec8aae62))
+* release 1.0.0-b22 ([1fddfc9](https://github.com/ebullient/the-calendarium/commit/1fddfc9516cbbe76adf4c336340f1941f7a78670))
+* release 1.0.0-b23 ([15bf107](https://github.com/ebullient/the-calendarium/commit/15bf107e558025b76eaee7c8c9fb9ce9cea115a8))
+* release 1.0.0-b24 ([ed2a63f](https://github.com/ebullient/the-calendarium/commit/ed2a63fb2fc0cce4f067f1fa341c283ade07d148))
+* release 1.0.0-b25 ([a118912](https://github.com/ebullient/the-calendarium/commit/a1189121e9e5ba590ac96cf4bb862bd9708d5c7e))
+* release 1.0.0-b9 ([c07ee4c](https://github.com/ebullient/the-calendarium/commit/c07ee4c7e83f558f9deffefce338808202f8f68b))
+
 ## [1.0.1-b25](https://github.com/javalent/the-calendarium/compare/1.0.0-b25...1.0.1-b25) (2023-09-12)
 
 
